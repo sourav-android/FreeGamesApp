@@ -40,7 +40,6 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        /*jvmTarget = "1.8"*/
         jvmTarget = "1.8"
     }
     buildFeatures {
@@ -49,7 +48,6 @@ android {
         buildConfig = true
     }
     composeOptions {
-        /*kotlinCompilerExtensionVersion = "1.5.1"*/
         kotlinCompilerExtensionVersion = "1.5.10"
     }
     packaging {
@@ -63,7 +61,7 @@ dependencies {
 
     val hiltVersion = "2.48"
     val retrofitVersion = "2.9.0"
-    val koinVersion = "3.5.1"
+    val koinVersion = "3.5.3"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -95,16 +93,16 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-runtime-compose:2.7.0")
     implementation ("androidx.navigation:navigation-compose:2.7.7")
 
-    /*-- Retrofit ---*/
-    implementation ("com.squareup.retrofit2:retrofit:$retrofitVersion")
-    implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+        /*-- Retrofit ---*/
+        implementation ("com.squareup.retrofit2:retrofit:$retrofitVersion")
+        implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
     implementation("io.coil-kt:coil-compose:2.4.0")
 
     /*-- Koin ---*/
-    implementation("io.insert-koin:koin-android:3.5.3")
-    implementation("io.insert-koin:koin-androidx-navigation:3.5.3")
-    implementation("io.insert-koin:koin-androidx-compose:3.5.3")
+    implementation("io.insert-koin:koin-android:$koinVersion")
+    implementation("io.insert-koin:koin-androidx-navigation:$koinVersion")
+    implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
     implementation("io.insert-koin:koin-annotations:1.3.0")
 
 }
