@@ -38,8 +38,7 @@ fun FreeGameItem(modifier: Modifier, freeGamesModel: FreeGamesModel) {
                 modifier = modifier
                     .padding(4.dp)
                     .fillMaxWidth(),
-                contentScale = ContentScale.Crop
-            )
+                contentScale = ContentScale.Crop)
             Text(text = freeGamesModel.title, fontWeight = FontWeight.Bold)
             Text(text = freeGamesModel.shortDescription)
 

@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
-    id ("com.google.devtools.ksp")
+    /*id ("com.google.devtools.ksp")*/
 
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
@@ -82,7 +82,7 @@ dependencies {
 
     /*-- Dagger - Hilt --*/
      implementation("com.google.dagger:hilt-android:$hiltVersion")
-    ksp("com.google.dagger:hilt-android-compiler:$hiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
 
     /*ksp ("com.google.dagger:dagger-compiler:$hiltVersion")
     ksp ("com.google.dagger:hilt-compiler:$hiltVersion") */
@@ -102,6 +102,8 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
     implementation("io.coil-kt:coil-compose:2.4.0")
+
+
 }
 
 // Allow references to generated code

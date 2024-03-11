@@ -5,7 +5,7 @@ plugins {
 
     id("org.jetbrains.kotlin.jvm") version "2.0.0-Beta4"
     id("com.google.dagger.hilt.android") version "2.44" apply false
-    id("com.google.devtools.ksp") version "1.9.0-1.0.12" apply false
+    /*id("com.google.devtools.ksp") version "1.9.0-1.0.12" apply false*/
 
 
 }
