@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -20,6 +19,7 @@ import com.android.freegamesapp.presentation.state.UiEffect
 import com.android.freegamesapp.presentation.viewmodel.FreeGamesViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import org.koin.androidx.compose.koinViewModel
 
 
 @Composable
@@ -39,7 +39,7 @@ fun Navigation(navController: NavHostController) {
         ) {
 
             composable(Screen.GameScreen.route) {
-                val freeGameViewModel = hiltViewModel<FreeGamesViewModel>()
+                val freeGameViewModel = koinViewModel<FreeGamesViewModel>()
                 val state = freeGameViewModel.freeGameState.collectAsStateWithLifecycle()
 
                 LaunchedEffect(key1 = true) {

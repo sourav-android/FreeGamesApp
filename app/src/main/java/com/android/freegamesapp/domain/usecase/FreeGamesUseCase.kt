@@ -1,9 +1,8 @@
 package com.android.freegamesapp.domain.usecase
 
 import com.android.freegamesapp.domain.repository.FreeGamesRepository
-import javax.inject.Inject
 
-class FreeGamesUseCase @Inject constructor(
+class FreeGamesUseCase (
     private val freeGamesRepository: FreeGamesRepository
 ) {
 

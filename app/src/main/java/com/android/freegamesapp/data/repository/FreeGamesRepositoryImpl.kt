@@ -10,9 +10,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import javax.inject.Inject
 
-class FreeGamesRepositoryImpl @Inject constructor(
+class FreeGamesRepositoryImpl (
 
     private val freeGamesApi: FreeGamesApi,
 ) : FreeGamesRepository {

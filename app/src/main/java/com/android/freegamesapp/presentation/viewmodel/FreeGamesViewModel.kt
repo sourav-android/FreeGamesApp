@@ -17,8 +17,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
-@HiltViewModel
-class FreeGamesViewModel @Inject constructor(
+
+class FreeGamesViewModel (
     private val freeGamesUseCase: FreeGamesUseCase,
 ) : ViewModel() {
 

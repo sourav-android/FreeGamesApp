@@ -2,10 +2,10 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 
-    /*id ("com.google.devtools.ksp")*/
+    id ("com.google.devtools.ksp")
 
-    kotlin("kapt")
-    id("com.google.dagger.hilt.android")
+    /*kotlin("kapt")
+    id("com.google.dagger.hilt.android")*/
 
 }
 
@@ -63,6 +63,7 @@ dependencies {
 
     val hiltVersion = "2.48"
     val retrofitVersion = "2.9.0"
+    val koinVersion = "3.5.1"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -83,14 +84,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     /*-- Dagger - Hilt --*/
-     implementation("com.google.dagger:hilt-android:$hiltVersion")
-    kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
+    /*implementation("com.google.dagger:hilt-android:$hiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")*/
 
-    /*ksp ("com.google.dagger:dagger-compiler:$hiltVersion")
-    ksp ("com.google.dagger:hilt-compiler:$hiltVersion") */
-
-
-    
     /*-- Gson Serialization --*/
     implementation("com.google.code.gson:gson:2.10.1")
 
@@ -105,13 +101,18 @@ dependencies {
 
     implementation("io.coil-kt:coil-compose:2.4.0")
 
+    /*-- Koin ---*/
+    implementation("io.insert-koin:koin-android:3.5.3")
+    implementation("io.insert-koin:koin-androidx-navigation:3.5.3")
+    implementation("io.insert-koin:koin-androidx-compose:3.5.3")
+    implementation("io.insert-koin:koin-annotations:1.3.0")
 
 }
 
 // Allow references to generated code
-kapt {
+/*kapt {
     correctErrorTypes = true
     useBuildCache = true
     mapDiagnosticLocations = true
 
-}
+}*/
