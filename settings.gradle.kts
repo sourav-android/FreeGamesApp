@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FreeGamesAppPractice"
+rootProject.name = "FreeGamesListProject"
 include(":app")

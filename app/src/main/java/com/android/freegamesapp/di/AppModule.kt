@@ -6,7 +6,6 @@ import com.android.freegamesapp.data.repository.FreeGamesRepositoryImpl
 import com.android.freegamesapp.domain.repository.FreeGamesRepository
 import com.android.freegamesapp.domain.usecase.FreeGamesUseCase
 import com.android.freegamesapp.presentation.viewmodel.FreeGamesViewModel
-import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -34,6 +33,7 @@ val appModule = module {
     }
 
     viewModelOf(::FreeGamesViewModel)
+
 
 
 }
