@@ -17,7 +17,8 @@ import coil.compose.AsyncImage
 import com.android.freegamesapp.domain.model.FreeGamesModel
 
 @Composable
-fun FreeGameItem(modifier: Modifier, freeGamesModel: FreeGamesModel) {
+fun FreeGameItem(modifier: Modifier = Modifier,
+                 freeGamesModel: FreeGamesModel) {
 
     Card(
         modifier = modifier

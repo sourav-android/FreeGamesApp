@@ -11,7 +11,8 @@ import androidx.compose.ui.Modifier
 import com.android.freegamesapp.presentation.state.FreeGamesState
 
 @Composable
-fun GameScreen(freeGameState: FreeGamesState, modifier: Modifier) {
+fun GameScreen(freeGameState: FreeGamesState,
+               modifier: Modifier = Modifier) {
 
     if (freeGameState.freeGamesModel?.isNotEmpty()!!){
         LazyColumn {

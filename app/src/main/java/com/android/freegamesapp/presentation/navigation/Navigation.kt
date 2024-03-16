@@ -57,6 +57,7 @@ fun Navigation(navController: NavHostController) {
                         }
                     }
                 }
+
                 GameScreen(freeGameState = state.value, modifier = Modifier)
             }
 
@@ -64,41 +65,42 @@ fun Navigation(navController: NavHostController) {
 
     }
 
-    /*Scaffold(snackbarHost =
-    {
-        SnackbarHost(hostState = snackBarHostState)
-    }
+}
+
+/*Scaffold(snackbarHost =
+{
+    SnackbarHost(hostState = snackBarHostState)
+}
+) {
+    NavHost(
+        navController = navController,
+        startDestination = Screen.GameScreen.route,
+        modifier = Modifier.padding(it)
     ) {
-        NavHost(
-            navController = navController,
-            startDestination = Screen.GameScreen.route,
-            modifier = Modifier.padding(it)
-        ) {
 
-            composable(Screen.GameScreen.route) {
-                val freeGameViewModel = hiltViewModel<FreeGamesViewModel>()
-                val state = freeGameViewModel.freeGameState.collectAsStateWithLifecycle()
+        composable(Screen.GameScreen.route) {
+            val freeGameViewModel = hiltViewModel<FreeGamesViewModel>()
+            val state = freeGameViewModel.freeGameState.collectAsStateWithLifecycle()
 
-                LaunchedEffect(key1 = true) {
-                    freeGameViewModel.uiEffect.collectLatest { uiEffect ->
-                        when (uiEffect) {
+            LaunchedEffect(key1 = true) {
+                freeGameViewModel.uiEffect.collectLatest { uiEffect ->
+                    when (uiEffect) {
 
-                            is UiEffect.ShowSnackBar -> {
-                                launch {
-                                    snackBarHostState.showSnackbar(uiEffect.msg, duration = SnackbarDuration.Long)
-                                }
+                        is UiEffect.ShowSnackBar -> {
+                            launch {
+                                snackBarHostState.showSnackbar(uiEffect.msg, duration = SnackbarDuration.Long)
                             }
+                        }
 
-                            UiEffect.NavigationDetailsScreen -> {
+                        UiEffect.NavigationDetailsScreen -> {
 
-                            }
                         }
                     }
                 }
-                GameScreen(freeGameState = state.value, modifier = Modifier)
             }
-
+            GameScreen(freeGameState = state.value, modifier = Modifier)
         }
-    }*/
 
-}
+    }
+}*/
+
